@@ -1,146 +1,641 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <title>Shashi Shastri | Authentic Yoga & Wellness</title>
-    <meta name="description" content="Expert Yoga teacher offering 1:1 sessions. Personalized, authentic yoga for physical, mental, and spiritual wellness. Online & In-person in Ahemdabad.">
-    <meta name="keywords" content="Yoga teacher Ahemdabad, Female Yoga teacher Ahemdabad, Personal Yoga Trainer Ahemdabad, Authentic Yoga, Personal Yoga Trainer, Holistic Health, Shashi Yoga, Online Yoga India">
     
-    <!-- Schema Markup for Local Business -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Shashi Shastri Yoga",
-      "description": "Authentic Yoga practitioner and educator providing 1:1 sessions.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ahemdabad",
-        "addressCountry": "IN"
-      },
-      "url": "https://yogawithshashi.pages.dev"
-    }
-    </script>
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Experience authentic classical yoga with Shashi Shastri (Masters in Hatha Yoga). Specializing in Traditional Patanjali, Pranayam, and Shatkarma cleansing. Join live online from USA, UK, Dubai, or in-person in Ahmedabad.">
+    <meta name="keywords" content="Yoga with Shashi, Shashi Shastri, Hatha Yoga Masters Haridwar, Patanjali Yoga Ahmedabad, Pranayam classes, online yoga India, yoga teacher Ahmedabad, Shatkarma Kriya, authentic yoga, yoga for beginners, yoga for seniors">
+    <meta name="author" content="Shashi Shastri">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yogawithshashi.com">
+
+    <!-- Open Graph / Facebook / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yogawithshashi.com">
+    <meta property="og:title" content="Yoga with Shashi — Authentic Patanjali & Traditional Pranayam">
+    <meta property="og:description" content="Deepen your physical strength, restore flexibility, and find mental stillness with Shashi Shastri. Interactive online sessions globally and in-person classes in Ahmedabad.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yogawithshashi.com">
+    <meta property="twitter:title" content="Yoga with Shashi — Authentic Patanjali & Traditional Pranayam">
+    <meta property="twitter:description" content="Deepen your physical strength and find mental stillness with Shashi Shastri. In-person Ahmedabad & Online globally.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200">
+
+    <title>Yoga with Shashi — Authentic Patanjali & Traditional Pranayam</title>
+    <!-- Google Fonts: Inter for clean UI, Playfair Display for majestic serif headings, Noto Sans Devanagari for elegant Hindi rendering -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Tailwind Configuration for Custom Forest & Cream Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            DEFAULT: '#0D2214',
+                            light: '#1B3C24',
+                            pale: '#E9EFEA',
+                        },
+                        sage: {
+                            DEFAULT: '#4E6A56',
+                            light: '#8FA895',
+                            cream: '#F4EFEA',
+                        },
+                        warmcream: {
+                            DEFAULT: '#FDFBF7',
+                            card: '#FAF6F0',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans Devanagari', 'sans-serif'],
+                        serif: ['Playfair Display', 'Noto Sans Devanagari', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for instantaneous Language Switching & Smooth Transitions -->
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .active-lang { background-color: #57534e !important; color: white !important; }
+        /* Instant translation mechanics without DOM rebuilds */
+        html[lang="en"] [data-lang="hi"] { display: none !important; }
+        html[lang="hi"] [data-lang="en"] { display: none !important; }
+
+        /* Smooth visual focus states for touch devices */
+        button, a {
+            -webkit-tap-highlight-color: transparent;
+        }
     </style>
 </head>
-<body class="bg-stone-50 min-h-screen pb-12">
+<body class="bg-warmcream text-forest font-sans antialiased selection:bg-sage/20 selection:text-forest">
 
-    <header class="sticky top-0 z-50 bg-stone-50/90 backdrop-blur-sm w-full py-4 px-4 flex justify-between items-center shadow-sm">
-        <div class="text-lg font-bold text-stone-800">Yoga With Shashi</div>
-        <div class="bg-stone-200 p-1 rounded-full flex gap-1 shadow-inner">
-            <button id="btn-en" class="active-lang px-4 py-1 rounded-full text-xs font-semibold transition" onclick="setLanguage('en')">EN</button>
-            <button id="btn-hi" class="px-4 py-1 rounded-full text-xs font-semibold transition" onclick="setLanguage('hi')">हिंदी</button>
+    <!-- STICKY NAVIGATION HEADER WITH FROSTED-GLASS BACKDROP -->
+    <header class="sticky top-0 z-50 w-full bg-warmcream/80 backdrop-blur-md border-b border-forest/5 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <!-- Left Side: Typography-focused branding -->
+            <a href="#" class="flex flex-col focus:outline-none" aria-label="Yoga with Shashi Home">
+                <span class="font-serif text-lg sm:text-2xl font-bold tracking-tight text-forest whitespace-nowrap">
+                    Yoga with Shashi
+                </span>
+                <span class="text-[10px] tracking-wider uppercase text-sage font-semibold -mt-1" id="sub-en" data-lang="en">IN-PERSON & ONLINE</span>
+                <span class="text-[10px] tracking-wider uppercase text-sage font-semibold -mt-1" id="sub-hi" data-lang="hi">व्यक्तिगत और ऑनलाइन</span>
+            </a>
+
+            <!-- Right Side: Thumb-friendly Language Toggle Switch -->
+            <div class="flex items-center">
+                <div class="bg-forest/5 p-1 rounded-full flex items-center space-x-1" role="radiogroup" aria-label="Language Selector">
+                    <button onclick="setLanguage('en')" id="lang-btn-en" class="px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 bg-forest text-warmcream shadow-sm" aria-checked="true" role="radio">
+                        EN
+                    </button>
+                    <button onclick="setLanguage('hi')" id="lang-btn-hi" class="px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 text-forest hover:bg-forest/5" aria-checked="false" role="radio">
+                        हिंदी
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="w-full max-w-lg mx-auto p-4 space-y-8">
+    <main class="relative overflow-hidden">
         
-        <section class="text-center space-y-4 pt-4">
-            <div class="w-32 h-32 mx-auto bg-stone-300 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-lg">
-                <img src="media/hero.jpg" alt="Yoga Instructor hero profile" />
+        <!-- SECTION 1: HERO (Mobile-First Entry Stack) -->
+        <section class="relative pt-6 pb-16 md:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+            <!-- Light Decorative Element for Visual Premium Feel -->
+            <div class="absolute -top-10 -left-10 w-72 h-72 bg-sage-light/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 right-0 w-80 h-80 bg-forest-pale/30 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center relative">
+                <!-- Text Container (Stacked first on mobile) -->
+                <div class="md:col-span-7 flex flex-col space-y-6 text-left order-1">
+                    <div class="inline-flex items-center space-x-2 bg-forest-pale text-forest-light px-3 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase w-max">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span data-lang="en">AUTHENTIC LINAGE PRACTICE</span>
+                        <span data-lang="hi">प्रामाणिक योग परंपरा</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-forest leading-tight">
+                        <span data-lang="en">Embrace the Authentic <br class="hidden sm:inline" /><span class="italic font-normal">Path of Yoga</span></span>
+                        <span data-lang="hi">योग के प्रामाणिक <br class="hidden sm:inline" /><span class="italic text-font-normal">मार्ग को अपनाएं</span></span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-forest/80 leading-relaxed max-w-xl">
+                        <span data-lang="en">Deepen your physical strength, restore flexibility, and find mental stillness with Shashi Shastri. Practicing in Ahmedabad and streaming live to dedicated students worldwide.</span>
+                        <span data-lang="hi">शशि शास्त्री के साथ अपने शारीरिक बल को बढ़ाएं, लचीलापन वापस पाएं और मानसिक शांति का अनुभव करें। अहमदाबाद में व्यक्तिगत कक्षाएं और वैश्विक स्तर पर ऑनलाइन सीधा प्रसारण।</span>
+                    </p>
+
+                    <!-- Primary Call To Action Block -->
+                    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                        <a href="https://instagram.com/shash.yoga/" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center justify-center px-6 py-4 rounded-full bg-forest text-warmcream font-semibold text-sm tracking-wide shadow-xl shadow-forest/10 hover:bg-forest-light active:scale-95 transition-all duration-150 text-center"
+                           aria-label="Book on Instagram">
+                            <span data-lang="en">Schedule & Book via Instagram</span>
+                            <span data-lang="hi">इंस्टाग्राम पर शेड्यूल और बुक करें</span>
+                            <!-- Custom Instagram Minimalist Icon -->
+                            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="#about" 
+                           class="inline-flex items-center justify-center px-6 py-4 rounded-full border border-forest/15 text-forest font-semibold text-sm hover:bg-forest/5 active:scale-95 transition-all duration-150 text-center"
+                           aria-label="Learn more about Shashi">
+                            <span data-lang="en">Read Biography</span>
+                            <span data-lang="hi">मेरी जीवनी पढ़ें</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Beautiful Portrait Container (Order 2 so it is placed below text on mobile) -->
+                <div class="md:col-span-5 order-2 flex justify-center items-center w-full">
+                    <div class="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-forest-pale border-4 border-white">
+                        <!-- Portrait Image (Fills frame fully with elegant yoga silhouette fallback) -->
+                        <img id="hero-img" 
+                             src="media/hero.jpg" 
+                             alt="Shashi Shastri doing a classical meditation pose" 
+                             class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                             onerror="this.style.display='none'; document.getElementById('hero-fallback-svg').classList.remove('hidden');" />
+                        
+                        <!-- High Quality SVG Silhouette Fallback in case image fails to load or offline -->
+                        <div id="hero-fallback-svg" class="hidden absolute inset-0 bg-forest flex flex-col justify-center items-center p-6 text-center text-warmcream">
+                            <svg class="w-32 h-32 mb-4 text-sage-light" viewBox="0 0 100 100" fill="currentColor">
+                                <circle cx="50" cy="20" r="8"/>
+                                <path d="M50 32c-10 0-14 4-14 14 0 4 1 8 3 11l-5 20h32l-5-20c2-3 3-7 3-11 0-10-4-14-14-14zM32 85h36v4H32z"/>
+                            </svg>
+                            <span class="font-serif text-lg tracking-wide">Yoga with Shashi</span>
+                        </div>
+
+                        <!-- Absolute Badges for Proof -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3.5 rounded-2xl shadow-lg border border-forest/5 flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] font-bold text-sage uppercase tracking-wider" data-lang="en">Active Practice</span>
+                                <span class="text-[10px] font-bold text-sage uppercase tracking-wider" data-lang="hi">सक्रिय अभ्यास</span>
+                                <span class="text-xs font-semibold text-forest font-serif" data-lang="en">In-Person & Virtual</span>
+                                <span class="text-xs font-semibold text-forest font-serif" data-lang="hi">व्यक्तिगत और ऑनलाइन</span>
+                            </div>
+                            <div class="flex items-center space-x-1 text-yellow-500">
+                                <span class="font-bold text-sm text-forest">5.0</span>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h1 data-i18n="hero_title" class="text-2xl font-bold text-stone-900 leading-tight">Meet Shashi Shastri: Elevating Your Life Through Authentic Yoga</h1>
-                <p data-i18n="hero_subtitle" class="text-stone-600 mt-2 font-medium">Your Journey Toward Balance Starts Here</p>
+        </section>
+
+        <!-- SECTION 2: A PERSONAL TOUCH - FROM THE MAT -->
+        <section id="about" class="bg-sage-cream/40 py-16 px-4 sm:px-6 border-y border-forest/5">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col space-y-8">
+                    <!-- Section Title & Narrative -->
+                    <div class="space-y-4">
+                        <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="en">Deep Trust & Experience</span>
+                        <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="hi">विश्वास और प्रामाणिक अनुभव</span>
+                        
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-forest">
+                            <span data-lang="en">From the Mat: Shashi Shastri</span>
+                            <span data-lang="hi">योग साधन - शशि शास्त्री की यात्रा</span>
+                        </h2>
+                        
+                        <p class="text-base sm:text-lg text-forest/80 leading-relaxed">
+                          <!-- ENGLISH VERSION -->
+                          <span data-lang="en" class="block mb-4">
+                              For as long as I can remember, yoga has been the steady heartbeat of my life. I was blessed to begin practicing as a child, and over the decades, it has evolved from a daily ritual into my absolute life force. Yoga isn't just what I do; it is exactly who I am.
+                          </span>
+
+                          <span data-lang="en" class="block mb-4">
+                              When I became a mom, my relationship with the mat shifted completely. Suddenly, I was living in the beautiful, overwhelming whirlwind of motherhood—dealing with sleepless nights, deep postpartum exhaustion, and that heavy mental load where you constantly put everyone else’s needs above your own. In those chaotic years, my yoga mat became my lifeline. It wasn’t a place to perform perfect, rigid postures; it was a quiet sanctuary where I could simply breathe, rebuild my core strength from the inside out, and reclaim my sanity.
+                          </span>
+
+                          <span data-lang="en" class="block">
+                              That is the warmth and understanding I bring to you. As a graduated yoga instructor with over a decade of teaching across the globe, I don’t look at you as just another student in a class. I see you as a whole person. Whether you are joining me in person here in Ahmedabad or practicing live with me from across the world, my sessions are a safe, judgment-free space. Think of it as coming home to yourself—a place to heal your body, quiet your mind, and gather the strength you need to handle everything waiting for you off the mat.
+                          </span>
+
+                          <!-- HINDI VERSION -->
+                          <span data-lang="hi" class="block mb-4">
+                              जहाँ तक मुझे याद है, योग मेरे जीवन की एक शांत और स्थिर धड़कन रहा है। मैं भाग्यशाली थी कि बचपन में ही मेरा परिचय इस साधना से हो गया था, और दशकों के इस सफर में यह केवल एक आदत नहीं, बल्कि मेरी जीवन-शक्ति बन गया है। योग सिर्फ वो नहीं है जो मैं करती हूँ; योग वही है जो मैं हूँ।
+                          </span>
+
+                          <span data-lang="hi" class="block mb-4">
+                              जब मैं एक माँ बनी, तो मैट के साथ मेरा रिश्ता पूरी तरह बदल गया। अचानक, मैं मातृत्व के उस खूबसूरत लेकिन थका देने वाले दौर में थी—जहाँ नींद अधूरी थी, शरीर में भारी थकान थी, और मन पर एक ऐसा बोझ था जहाँ हम हमेशा दूसरों को खुद से आगे रखते हैं। उन उलझन भरे सालों में, मेरा योग मैट मेरा सहारा बना। वह जगह किसी कठिन आसन को दिखाने के लिए नहीं थी; वह एक ऐसा शांत कोना था जहाँ मैं बस गहरी साँस ले सकूं, अपनी आंतरिक शक्ति को फिर से जगा सकूं और मानसिक शांति पा सकूं।
+                          </span>
+
+                          <span data-lang="hi" class="block">
+                              यही अपनापन और समझ मैं आपके लिए लेकर आती हूँ। दुनिया भर के छात्रों को सिखाने के एक दशक से अधिक के अनुभव के साथ एक ग्रेजुएटेड योग शिक्षक के रूप में, मैं आपको सिर्फ एक क्लास में आए छात्र की तरह नहीं देखती। मैं आपको एक संपूर्ण व्यक्ति के रूप में देखती हूँ। चाहे आप अहमदाबाद में मुझसे मिलने आएं या दुनिया के किसी भी कोने से मेरे साथ लाइव अभ्यास करें, मेरे सत्र आपके लिए एक सुरक्षित स्थान हैं, जहाँ कोई आपको जज नहीं करेगा। इसे अपने पास वापस लौटने जैसा समझिए—एक ऐसी जगह जो आपके शरीर को स्वस्थ करेगी, आपके मन को शांत करेगी, और आपको वह शक्ति देगी जिसकी ज़रूरत आपको मैट से बाहर की दुनिया में है।
+                          </span>
+                      </p>
+                    </div>
+
+                    <!-- Bulleted Vertical Timeline -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-forest/5 shadow-sm space-y-6">
+                        <h3 class="text-xs font-bold tracking-widest text-forest/40 uppercase border-b border-forest/10 pb-2">
+                            <span data-lang="en">Core Credentials</span>
+                            <span data-lang="hi">मुख्य योग्यताएं और अनुभव</span>
+                        </h3>
+
+                        <div class="space-y-6 relative border-l border-sage/20 pl-6 ml-2">
+                            <!-- Bullet 1 -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 bg-sage text-warmcream p-1 rounded-full w-4 h-4 flex items-center justify-center">
+                                    <span class="w-1.5 h-1.5 bg-warmcream rounded-full"></span>
+                                </span>
+                                <h4 class="font-serif text-base sm:text-lg font-bold text-forest">
+                                    <span data-lang="en">15+ Years of Dedicated Journey</span>
+                                    <span data-lang="hi">15+ वर्षों का समर्पित अनुभव</span>
+                                </h4>
+                                <p class="text-xs sm:text-sm text-forest/75 mt-1">
+                                    <span data-lang="en">Proudly teaching local communities and global travelers, now permanently based in Ahmedabad, Gujarat.</span>
+                                    <span data-lang="hi">स्थानीय समुदायों और दुनिया भर के साधकों को योग दीक्षा, अब अहमदाबाद, गुजरात में स्थायी रूप से स्थापित।</span>
+                                </p>
+                            </div>
+
+                            <!-- Bullet 2 -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 bg-sage text-warmcream p-1 rounded-full w-4 h-4 flex items-center justify-center">
+                                    <span class="w-1.5 h-1.5 bg-warmcream rounded-full"></span>
+                                </span>
+                                <h4 class="font-serif text-base sm:text-lg font-bold text-forest">
+                                    <span data-lang="en">Masters in Hatha Yoga</span>
+                                    <span data-lang="hi">हठ योग में मास्टर्स (Masters)</span>
+                                </h4>
+                                <p class="text-xs sm:text-sm text-forest/75 mt-1">
+                                    <span data-lang="en">Obtained a comprehensive postgraduate degree in Hatha Yoga from a highly reputed, traditional yoga college in Haridwar.</span>
+                                    <span data-lang="hi">हरिद्वार के एक अत्यंत प्रतिष्ठित और पारंपरिक योग महाविद्यालय से हठ योग में व्यापक स्नातकोत्तर (Postgraduate) डिग्री प्राप्त की।</span>
+                                </p>
+                            </div>
+
+                            <!-- Bullet 3 -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 bg-sage text-warmcream p-1 rounded-full w-4 h-4 flex items-center justify-center">
+                                    <span class="w-1.5 h-1.5 bg-warmcream rounded-full"></span>
+                                </span>
+                                <h4 class="font-serif text-base sm:text-lg font-bold text-forest">
+                                    <span data-lang="en">200+ Dedicated Students</span>
+                                    <span data-lang="hi">200+ समर्पित छात्र</span>
+                                </h4>
+                                <p class="text-xs sm:text-sm text-forest/75 mt-1">
+                                    <span data-lang="en">Actively mentoring and transforming hundreds of practitioners globally and locally with personalized attention.</span>
+                                    <span data-lang="hi">व्यक्तिगत ध्यान के साथ वैश्विक और स्थानीय स्तर पर सैकड़ों योग साधकों का सक्रिय मार्गदर्शन और जीवन परिवर्तन।</span>
+                                </p>
+                            </div>
+
+                            <!-- Bullet 4 -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 bg-sage text-warmcream p-1 rounded-full w-4 h-4 flex items-center justify-center">
+                                    <span class="w-1.5 h-1.5 bg-warmcream rounded-full"></span>
+                                </span>
+                                <h4 class="font-serif text-base sm:text-lg font-bold text-forest">
+                                    <span data-lang="en">Global Teaching Portfolio</span>
+                                    <span data-lang="hi">वैश्विक योग पोर्टफोलियो</span>
+                                </h4>
+                                <p class="text-xs sm:text-sm text-forest/75 mt-1">
+                                    <span data-lang="en">Instructed diverse student communities across India, USA, UK, and Dubai via intensive virtual modules.</span>
+                                    <span data-lang="hi">वर्चुअल माध्यमों से भारत, अमेरिका, यूके (UK) और दुबई के सैकड़ों विविध साधकों को निरंतर मार्गदर्शन।</span>
+                                </p>
+                            </div>
+
+                            <!-- Bullet 5 -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 bg-sage text-warmcream p-1 rounded-full w-4 h-4 flex items-center justify-center">
+                                    <span class="w-1.5 h-1.5 bg-warmcream rounded-full"></span>
+                                </span>
+                                <h4 class="font-serif text-base sm:text-lg font-bold text-forest">
+                                    <span data-lang="en">Multi-Generational Specialist</span>
+                                    <span data-lang="hi">बहु-पीढ़ी स्वास्थ्य विशेषज्ञ</span>
+                                </h4>
+                                <p class="text-xs sm:text-sm text-forest/75 mt-1">
+                                    <span data-lang="en">Expertly and safely modifying complex yoga postures for practitioners ranging from ages 5 to 88.</span>
+                                    <span data-lang="hi">5 वर्ष के बच्चों से लेकर 88 वर्ष तक के बुजुर्गों के लिए योग मुद्राओं को बेहद सुरक्षित और प्रभावी रूप से संशोधित करने में माहिर।</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Social Media Section -->
-            <div class="flex justify-center gap-4 py-2">
-                <a href="https://instagram.com/shash.yoga/" class="bg-stone-200 w-12 h-12 flex items-center justify-center rounded-full text-stone-700 hover:bg-stone-300 transition">
-                    <i class="fab fa-instagram text-xl"></i>
+        </section>
+
+        <!-- SECTION 3: VISUAL VAULT - MOVEMENTS & VIDEOS GALLERY -->
+        <section class="py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="en">Inside the Practice</span>
+                <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="hi">अभ्यास की झलक</span>
+                
+                <h2 class="text-2xl sm:text-3xl font-serif font-bold text-forest">
+                    <span data-lang="en">Visual Vault: Movement & Stillness</span>
+                    <span data-lang="hi">साधना दीर्घा: गतिशीलता और शांति</span>
+                </h2>
+                
+                <p class="text-sm sm:text-base text-forest/70 max-w-xl mx-auto">
+                    <span data-lang="en">A glimpse of structural alignments, asana precision, and traditional daily sadhana practices.</span>
+                    <span data-lang="hi">शारीरिक संरेखण, सटीक आसन मुद्राओं और दैनिक पारम्परिक योग साधना की झलकियां।</span>
+                </p>
+            </div>
+
+            <!-- Responsive Grid Layout: 1 column on mobile, 3 columns on desktop -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Vinyasa flow alignment breakdown -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white border border-forest/5 aspect-[4/3] flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600" 
+                         alt="Shashi performing Vinyasa Flow" 
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                    <!-- Absolute Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-forest/20 to-transparent flex flex-col justify-end p-4">
+                        <span class="text-warmcream font-serif text-base sm:text-lg font-bold" data-lang="en">Ashtanga Alignment</span>
+                        <span class="text-warmcream font-serif text-base sm:text-lg font-bold" data-lang="hi">अष्टांग संरेखण</span>
+                        <span class="text-[11px] text-sage-light font-semibold tracking-wider uppercase mt-0.5" data-lang="en">Structural Balance</span>
+                        <span class="text-[11px] text-sage-light font-semibold tracking-wider uppercase mt-0.5" data-lang="hi">शारीरिक संतुलन</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: YouTube Link Card (Includes Play Icon Overlay) -->
+                <a href="https://www.youtube.com/watch?v=JwNV-IxXvBQ" target="_blank" rel="noopener noreferrer" 
+                   class="group relative rounded-2xl overflow-hidden shadow-md bg-white border border-forest/5 aspect-[4/3] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-sage"
+                   aria-label="Watch class on YouTube">
+                    <img src="https://i1.ytimg.com/vi/JwNV-IxXvBQ/hqdefault.jpg" 
+                         alt="YouTube Session Cover" 
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-90" />
+                    <!-- Play Icon Overlay -->
+                    <div class="absolute inset-0 bg-forest/30 flex items-center justify-center group-hover:bg-forest/40 transition-colors">
+                        <div class="w-14 h-14 bg-warmcream text-forest rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 active:scale-95 transition-transform duration-200">
+                            <!-- Play SVG -->
+                            <svg class="w-6 h-6 ml-1 text-forest fill-current" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Absolute text -->
+                    <div class="absolute bottom-4 left-4 right-4 flex flex-col">
+                        <span class="text-white font-serif text-base sm:text-lg font-bold" data-lang="en">Watch live on YouTube</span>
+                        <span class="text-white font-serif text-base sm:text-lg font-bold" data-lang="hi">यूट्यूब लाइव सत्र देखें</span>
+                        <span class="text-[11px] text-warmcream/80 font-semibold tracking-wider uppercase" data-lang="en">Interactive Stream</span>
+                        <span class="text-[11px] text-warmcream/80 font-semibold tracking-wider uppercase" data-lang="hi">इंटरएक्टिव लाइव</span>
+                    </div>
                 </a>
-                <a href="https://www.facebook.com/shashi.shastri.54/" class="bg-stone-200 w-12 h-12 flex items-center justify-center rounded-full text-stone-700 hover:bg-stone-300 transition">
-                    <i class="fab fa-facebook-f text-xl"></i>
-                </a>
+
+                <!-- Card 3: Deep breathing meditation -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white border border-forest/5 aspect-[4/3] flex items-center justify-center sm:col-span-2 lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1506126279646-a6602472f626?auto=format&fit=crop&q=80&w=600" 
+                         alt="Meditation posture and breathing" 
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                    <!-- Absolute Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-forest/20 to-transparent flex flex-col justify-end p-4">
+                        <span class="text-warmcream font-serif text-base sm:text-lg font-bold" data-lang="en">Pranayama Stillness</span>
+                        <span class="text-warmcream font-serif text-base sm:text-lg font-bold" data-lang="hi">प्राणायाम और एकाग्रता</span>
+                        <span class="text-[11px] text-sage-light font-semibold tracking-wider uppercase mt-0.5" data-lang="en">Mental Grounding</span>
+                        <span class="text-[11px] text-sage-light font-semibold tracking-wider uppercase mt-0.5" data-lang="hi">मानसिक स्थिरता</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <div class="bg-white p-6 rounded-3xl shadow-sm text-stone-700 leading-relaxed text-sm">
-            <p data-i18n="intro">Welcome. I am Shashi Shastri, a dedicated Yoga practitioner and educator with a mission to help you reclaim your vitality, mental clarity, and inner peace. With 15 years of immersive practice and teaching experience, I believe that yoga is not just about the physical posture—it is a lifelong science of living. My approach is rooted in the timeless wisdom of traditional yogic principles, curated to address the unique challenges of the modern world. Whether you are seeking physical rehabilitation, stress reduction, or a deeper connection with your purpose, I am here to guide you.</p>
-        </div>
+        <!-- SECTION 4: THE DIMENSIONS OF YOGA -->
+        <section class="bg-forest-pale/40 py-16 px-4 sm:px-6 border-y border-forest/5">
+            <div class="max-w-4xl mx-auto space-y-12">
+                <div class="text-center space-y-3">
+                    <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="en">Expertise & Delivery</span>
+                    <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="hi">विशेषज्ञता और सिखाने का तरीका</span>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-forest">
+                        <span data-lang="en">The Dimensions of Yoga</span>
+                        <span data-lang="hi">योग के विभिन्न आयाम</span>
+                    </h2>
+                </div>
 
-        <section class="space-y-4">
-            <h2 data-i18n="why_title" class="text-xl font-bold text-stone-900">Why Train With Me?</h2>
-            
-            <div class="bg-white p-6 rounded-3xl shadow-sm space-y-3">
-                <h3 data-i18n="expertise_title" class="font-semibold text-stone-900">Expertise You Can Trust</h3>
-                <p data-i18n="expertise_desc" class="text-sm text-stone-600">I hold a Master’s degree in Yoga from one of India’s most prestigious institutions. My foundation is built on deep academic knowledge combined with over a decade and a half of practical, hands-on experience in guiding diverse individuals on their path to wellness.</p>
-            </div>
+                <!-- Modalities Stack -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Modality 1 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-forest/5 space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-forest-pale flex items-center justify-center text-forest">
+                            <!-- Lotus Flower SVG Silhouette -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18M6.3 6.3l11.4 11.4M17.7 6.3L6.3 17.7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-lg sm:text-xl font-bold text-forest">
+                            <span data-lang="en">Traditional Patanjali and Pranayam</span>
+                            <span data-lang="hi">पारंपरिक पतंजलि और प्राणायाम</span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-forest/75 leading-relaxed">
+                            <span data-lang="en">Focuses on classical Patanjali yoga sutras, structural alignment, pranayama breath-control, and physical integration to establish deep restoration.</span>
+                            <span data-lang="hi">गहरे स्वास्थ्य लाभ और ऊर्जा संतुलन स्थापित करने के लिए शास्त्रीय पतंजलि योग सूत्रों, शारीरिक संरेखण, प्राणायाम श्वास-नियंत्रण और शारीरिक एकीकरण पर ध्यान केंद्रित करता है।</span>
+                        </p>
+                    </div>
 
-            <div class="bg-white p-6 rounded-3xl shadow-sm space-y-3">
-                <h3 data-i18n="yoga_all_title" class="font-semibold text-stone-900">Yoga for Everyone</h3>
-                <p data-i18n="yoga_all_desc" class="text-sm text-stone-600">My practice is inclusive and transformative. I work with all ages and all genders, tailoring every session to meet your specific body type, goals, and lifestyle. I don't believe in a "one-size-fits-all" approach; instead, I prioritize Quality of Life, Yogic Philosophy, and Holistic Health.</p>
+                    <!-- Modality 2 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-forest/5 space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-forest-pale flex items-center justify-center text-forest">
+                            <!-- Cleansing Drop SVG -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-lg sm:text-xl font-bold text-forest">
+                            <span data-lang="en">Shatkarma Kriyas & Cleansing</span>
+                            <span data-lang="hi">षट्कर्म क्रियाएं और शरीर शुद्धि</span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-forest/75 leading-relaxed">
+                            <span data-lang="en">Authentic purification techniques including Jal Neti, Dhauti, and advanced Pranayama mechanics to detoxify channels, settle digestion, and clarify respiratory pathways.</span>
+                            <span data-lang="hi">जल नेति, धौति और उन्नत प्राणायाम जैसी वैज्ञानिक एवं प्रामाणिक शुद्धि तकनीकें, जो शरीर के विषैले तत्वों को दूर कर पाचन और श्वसन तंत्र को उत्तम बनाती हैं।</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Delivery Notice Banner -->
+                <div class="bg-forest text-warmcream p-6 sm:p-8 rounded-2xl shadow-lg border border-white/10 relative overflow-hidden">
+                    <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-sage/20 rounded-full blur-2xl"></div>
+                    <div class="relative flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-2">
+                            <span class="text-[10px] tracking-widest text-sage-light uppercase font-bold" data-lang="en">HOW WE CONNECT</span>
+                            <span class="text-[10px] tracking-widest text-sage-light uppercase font-bold" data-lang="hi">जुड़ने का माध्यम</span>
+                            
+                            <h4 class="font-serif text-lg sm:text-xl font-bold">
+                                <span data-lang="en">Flexible Formats, Seamless Path</span>
+                                <span data-lang="hi">सुविधानुसार कक्षाएं, सहज अभ्यास</span>
+                            </h4>
+                            
+                            <p class="text-xs sm:text-sm text-warmcream/80 max-w-xl">
+                                <span data-lang="en">Attend personal local training sessions in Ahmedabad or participate remotely in interactive live-streamed online classes globally via Instagram & Facebook Private Rooms.</span>
+                                <span data-lang="hi">अहमदाबाद में व्यक्तिगत कक्षाओं में शामिल हों या इंस्टाग्राम और फेसबुक प्राइवेट रूम के माध्यम से दुनिया भर से ऑनलाइन लाइव-स्ट्रीम कक्षाओं का लाभ उठाएं।</span>
+                            </p>
+                        </div>
+                        <a href="https://www.instagram.com/shash.yoga" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center justify-center bg-warmcream text-forest font-bold text-xs sm:text-sm px-5 py-3.5 rounded-full shadow-md hover:bg-sage-cream active:scale-95 transition-all text-center whitespace-nowrap"
+                           aria-label="Inquire via Direct Message">
+                            <span data-lang="en">Inquire via Direct Message</span>
+                            <span data-lang="hi">सीधा संदेश (DM) भेजें</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="bg-stone-100 p-6 rounded-3xl shadow-inner space-y-4 border border-stone-200">
-            <h3 data-i18n="guidance_title" class="font-semibold text-stone-900">Personalized Guidance, Worldwide</h3>
-            <p data-i18n="guidance_desc" class="text-sm text-stone-700">I am committed to providing the highest level of attention to your progress. I conduct 1:1 sessions exclusively. Global reach via online classes or in-person sessions (based in your city).</p>
-        </section>
+        <!-- SECTION 5: STUDENT CHRONICLES (Social Proof) -->
+        <section class="py-16 px-4 sm:px-6 max-w-4xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="en">Student Chronicles</span>
+                <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="hi">साधकों के अनुभव</span>
+                
+                <h2 class="text-2xl sm:text-3xl font-serif font-bold text-forest">
+                    <span data-lang="en">Transformations From the Mat</span>
+                    <span data-lang="hi">योग साधना से जीवन परिवर्तन</span>
+                </h2>
+            </div>
 
-        <section class="text-center space-y-6">
-            <blockquote data-i18n="quote" class="italic text-stone-500">"Yoga is the journey of the self, through the self, to the self."</blockquote>
-            
-            <div class="space-y-3">
-                <button class="w-full py-4 bg-stone-900 text-white font-semibold rounded-2xl shadow-md active:scale-95 transition" data-i18n="cta_btn">Contact For Your Initial Consultation</button>
-                <p data-i18n="cta_note" class="text-xs text-stone-500">Available for 1:1 sessions—Limited slots monthly.</p>
+            <!-- Single Column Vertical Stack of Testimonials -->
+            <div class="space-y-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-warmcream-card p-6 sm:p-8 rounded-2xl border border-forest/5 shadow-sm relative">
+                    <span class="absolute right-6 top-6 text-7xl font-serif text-sage/10 leading-none select-none">“</span>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-1 text-yellow-500">
+                            <!-- 5 Stars SVG -->
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        </div>
+                        <p class="text-sm sm:text-base text-forest/80 italic leading-relaxed">
+                            <span data-lang="en">"Shashi’s focus on structural details completely cured my 3-year chronic lower back stiffness. Her virtual classes feel so precise that it’s like she’s in the room with you, watching every breath."</span>
+                            <span data-lang="hi">"शशि जी के शारीरिक संरेखण पर सूक्ष्म ध्यान देने से मेरी 3 साल पुरानी पीठ के निचले हिस्से की अकड़न पूरी तरह से ठीक हो गई। उनके ऑनलाइन लाइव सेशन इतने सटीक हैं कि लगता है जैसे वह व्यक्तिगत रूप से सामने बैठकर देख रही हैं।"</span>
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-sage/20 flex items-center justify-center font-bold text-xs text-forest">
+                                AP
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-forest">Aarav P.</h4>
+                                <span class="text-[10px] text-sage font-medium uppercase tracking-wider" data-lang="en">Ahmedabad, Gujarat</span>
+                                <span class="text-[10px] text-sage font-medium uppercase tracking-wider" data-lang="hi">अहमदाबाद, गुजरात</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-warmcream-card p-6 sm:p-8 rounded-2xl border border-forest/5 shadow-sm relative">
+                    <span class="absolute right-6 top-6 text-7xl font-serif text-sage/10 leading-none select-none">“</span>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-1 text-yellow-500">
+                            <!-- 5 Stars SVG -->
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        </div>
+                        <p class="text-sm sm:text-base text-forest/80 italic leading-relaxed">
+                            <span data-lang="en">"At 72, I was incredibly afraid of sustaining injury during asanas. Shashi modifies postures with supreme tenderness and patience. I have regained physical balance and now sleep so peacefully."</span>
+                            <span data-lang="hi">"72 साल की उम्र में, मुझे योग अभ्यास के दौरान चोट लगने का डर था। शशि जी ने अत्यंत संवेदनशीलता और धैर्य के साथ आसनों को मेरे अनुकूल संशोधित किया। मैंने फिर से शारीरिक संतुलन प्राप्त कर लिया है और अब गहरी नींद सो पाती हूँ।"</span>
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-sage/20 flex items-center justify-center font-bold text-xs text-forest">
+                                MM
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-forest">Margaret M.</h4>
+                                <span class="text-[10px] text-sage font-medium uppercase tracking-wider" data-lang="en">Edinburgh, Scotland</span>
+                                <span class="text-[10px] text-sage font-medium uppercase tracking-wider" data-lang="hi">एडिनबर्ग, स्कॉटलैंड</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
     </main>
 
+    <!-- FOOTER FRAMEWORK (The Social Hub) -->
+    <footer class="bg-forest text-warmcream pt-16 pb-12 px-4 sm:px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-radial-gradient from-forest-light to-forest opacity-50 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto relative z-10 space-y-12">
+            
+            <div class="text-center space-y-6">
+                <!-- Large Elegant Yoga Logo/Symbol -->
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/5 border border-white/10 mx-auto">
+                    <svg class="w-8 h-8 text-sage-light" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.191-5.934 5.787 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.209l8.2-1.191L12 .587z" />
+                    </svg>
+                </div>
+                
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold max-w-lg mx-auto leading-relaxed">
+                    <span data-lang="en">Ready to establish harmony within your body?</span>
+                    <span data-lang="hi">क्या आप अपने शरीर में संतुलन और शांति स्थापित करने के लिए तैयार हैं?</span>
+                </h3>
+
+                <!-- Big padded SVG touch-targets -->
+                <div class="flex justify-center items-center space-x-6">
+                    <!-- Instagram Touch Target -->
+                    <a href="https://www.instagram.com/shash.yoga" target="_blank" rel="noopener noreferrer" 
+                       class="p-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 active:scale-90 transition-all text-warmcream"
+                       title="Follow Yoga with Shashi on Instagram"
+                       aria-label="Instagram Page">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                    </a>
+
+                    <!-- Facebook Touch Target -->
+                    <a href="https://www.facebook.com/shashi.shastri.54" target="_blank" rel="noopener noreferrer" 
+                       class="p-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 active:scale-90 transition-all text-warmcream"
+                       title="Connect with Shashi on Facebook"
+                       aria-label="Facebook Page">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Details -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+                <p class="text-xs text-warmcream/60">
+                    <span data-lang="en">Yoga with Shashi — Authentic Practice, Globally Connected. Based in Ahmedabad.</span>
+                    <span data-lang="hi">योगा विद शशि — प्रामाणिक अभ्यास, वैश्विक जुड़ाव। अहमदाबाद, गुजरात में स्थित।</span>
+                </p>
+                <p class="text-[11px] text-warmcream/40">
+                    &copy; <span id="year">2026</span> Yoga with Shashi. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- OPTIMIZED INLINE JAVASCRIPT FOR ZERO-RELOAD TRANSLATIONS -->
     <script>
-        const content = {
-            en: {
-                hero_title: "Meet Shashi Shastri: Elevating Your Life Through Authentic Yoga",
-                hero_subtitle: "Your Journey Toward Balance Starts Here",
-                intro: "Welcome. I am Shashi Shastri, a dedicated Yoga practitioner and educator with a mission to help you reclaim your vitality, mental clarity, and inner peace. With 15 years of immersive practice and teaching experience, I believe that yoga is not just about the physical posture—it is a lifelong science of living. My approach is rooted in the timeless wisdom of traditional yogic principles, curated to address the unique challenges of the modern world. Whether you are seeking physical rehabilitation, stress reduction, or a deeper connection with your purpose, I am here to guide you.",
-                why_title: "Why Train With Me?",
-                expertise_title: "Expertise You Can Trust",
-                expertise_desc: "I hold a Master’s degree in Yoga from one of India’s most prestigious institutions. My foundation is built on deep academic knowledge combined with over a decade and a half of practical, hands-on experience in guiding diverse individuals on their path to wellness.",
-                yoga_all_title: "Yoga for Everyone",
-                yoga_all_desc: 'My practice is inclusive and transformative. I work with all ages and all genders, tailoring every session to meet your specific body type, goals, and lifestyle. I don\'t believe in a "one-size-fits-all" approach; instead, I prioritize Quality of Life, Yogic Philosophy, and Holistic Health.',
-                guidance_title: "Personalized Guidance, Worldwide",
-                guidance_desc: "I am committed to providing the highest level of attention to your progress. I conduct 1:1 sessions exclusively. Global reach via online classes or in-person sessions (based in your city).",
-                quote: "Yoga is the journey of the self, through the self, to the self.",
-                cta_btn: "Book Your Initial Consultation",
-                cta_note: "Available for 1:1 sessions—Limited slots monthly."
-            },
-            hi: {
-                hero_title: "शशि शास्त्री से मिलें: योग के माध्यम से जीवन में सकारात्मक बदलाव",
-                hero_subtitle: "आत्म-खोज और संतुलन की ओर आपकी यात्रा",
-                intro: "नमस्ते। मैं शशि शास्त्री हूँ, एक समर्पित योग अभ्यासक और शिक्षक। मेरा लक्ष्य आपको योग के प्राचीन और प्रामाणिक सिद्धांतों के माध्यम से शारीरिक स्वास्थ्य, मानसिक स्पष्टता और आंतरिक शांति प्राप्त करने में मदद करना है। 15 वर्षों के गहन अनुभव और एक प्रतिष्ठित संस्थान से योग में मास्टर्स (Master’s in Yoga) की डिग्री के साथ, मैं योग को केवल शारीरिक व्यायाम नहीं, बल्कि जीने की एक संपूर्ण कला मानती हूँ। चाहे आप तनाव कम करना चाहते हों, अपनी शारीरिक क्षमता सुधारना चाहते हों, या जीवन में एक नया उद्देश्य ढूँढना चाहते हों, मैं आपकी इस यात्रा में एक मार्गदर्शक के रूप में आपके साथ हूँ।",
-                why_title: "मेरी योग पद्धति की विशेषताएँ",
-                expertise_title: "प्रामाणिक ज्ञान और अनुभव",
-                expertise_desc: "मेरा शिक्षण योग के गहरे सिद्धांतों और वैज्ञानिक दृष्टिकोण का मिश्रण है। वर्षों की साधना और अकादमिक शिक्षा ने मुझे हर व्यक्ति की शारीरिक और मानसिक आवश्यकताओं को समझने की दृष्टि दी है।",
-                yoga_all_title: "सभी के लिए योग",
-                yoga_all_desc: "मेरा अभ्यास समावेशी और परिवर्तनकारी है। मैं सभी उम्र और लिंग के लोगों के साथ काम करती हूँ, प्रत्येक सत्र को आपके शरीर के प्रकार, लक्ष्यों और जीवन शैली के अनुरूप बनाती हूँ। मैं 'वन-साइज-फिट्स-ऑल' दृष्टिकोण में विश्वास नहीं करती; इसके बजाय, मैं जीवन की गुणवत्ता, योग दर्शन और समग्र स्वास्थ्य को प्राथमिकता देती हूँ।",
-                guidance_title: "वव्यक्तिगत मार्गदर्शन (1:1), कहीं भी और कभी भी",
-                guidance_desc: "मैं आपकी प्रगति पर उच्चतम स्तर का ध्यान देने के लिए प्रतिबद्ध हूँ। मैं विशेष रूप से 1:1 सत्र आयोजित करती हूँ। वैश्विक पहुंच के माध्यम से ऑनलाइन कक्षाएं या व्यक्तिगत सत्र (आपके शहर में रहने वालों के लिए) उपलब्ध हैं।",
-                quote: "योग केवल आसन नहीं है, यह स्वयं को जानने और स्वयं से जुड़ने का एक मार्ग है।",
-                cta_btn: "अपना प्रारंभिक परामर्श बुक करें",
-                cta_note: "1:1 सत्रों के लिए उपलब्ध—हर महीने सीमित स्लॉट।"
-            }
-        };
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
 
+        /**
+         * Dynamic, zero-reload language switching.
+         * Toggles the lang attribute on html, updates state on language toggle buttons.
+         */
         function setLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (content[lang][key]) {
-                    element.textContent = content[lang][key];
-                }
-            });
+            // Set html tag lang attribute
+            document.documentElement.lang = lang;
 
-            document.getElementById('btn-en').classList.remove('active-lang');
-            document.getElementById('btn-hi').classList.remove('active-lang');
-            document.getElementById(`btn-${lang}`).classList.add('active-lang');
+            // Update state attributes and classes on toggle buttons
+            const btnEn = document.getElementById('lang-btn-en');
+            const btnHi = document.getElementById('lang-btn-hi');
+
+            if (lang === 'en') {
+                btnEn.setAttribute('aria-checked', 'true');
+                btnEn.className = "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 bg-forest text-warmcream shadow-sm";
+                
+                btnHi.setAttribute('aria-checked', 'false');
+                btnHi.className = "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 text-forest hover:bg-forest/5";
+            } else {
+                btnHi.setAttribute('aria-checked', 'true');
+                btnHi.className = "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 bg-forest text-warmcream shadow-sm";
+                
+                btnEn.setAttribute('aria-checked', 'false');
+                btnEn.className = "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 text-forest hover:bg-forest/5";
+            }
         }
     </script>
 </body>
