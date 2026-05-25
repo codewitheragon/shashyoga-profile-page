@@ -10,8 +10,8 @@
   --color-warmcream: #FDFBF7;
   --color-warmcream-card: #FAF6F0;
 
-  --font-sans: "Inter", "Noto Sans Devanagari", "sans-serif";
-  --font-serif: "Playfair Display", "Noto Sans Devanagari", "serif";
+  --font-sans: "Inter", "Noto Sans Devanagari", sans-serif;
+  --font-serif: "Playfair Display", "Noto Sans Devanagari", serif;
 }
 
 @layer base {

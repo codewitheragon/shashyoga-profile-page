@@ -3,10 +3,12 @@ import { content } from '../data/content';
 const { hero } = content;
 ---
 <section class="relative pt-6 pb-16 md:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <!-- Light Decorative Element for Visual Premium Feel -->
     <div class="absolute -top-10 -left-10 w-72 h-72 bg-sage-light/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute top-1/2 right-0 w-80 h-80 bg-forest-pale/30 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center relative">
+        <!-- Text Container (Stacked first on mobile) -->
         <div class="md:col-span-7 flex flex-col space-y-6 text-left order-1">
             <div class="inline-flex items-center space-x-2 bg-forest-pale text-forest-light px-3 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase w-max">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -15,7 +17,7 @@ const { hero } = content;
             </div>
 
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-forest leading-tight">
-                <span data-lang="en" set:html={hero.title.en.replace('Path of Yoga', '<span class="italic font-normal">Path of Yoga</span>')}></span>
+                <span data-lang="en" set:html={hero.title.en}></span>
                 <span data-lang="hi" set:html={hero.title.hi}></span>
             </h1>
 
@@ -24,23 +26,48 @@ const { hero } = content;
                 <span data-lang="hi">{hero.description.hi}</span>
             </p>
 
-            <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
-                <a href="#sessions" class="w-full sm:w-auto text-center bg-forest text-warmcream px-8 py-4 rounded-full font-bold text-sm sm:text-base hover:bg-forest-light active:scale-95 transition-all shadow-lg">
+            <!-- CTA Section Block -->
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <a href="https://instagram.com/shash.yoga/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center px-6 py-4 rounded-full bg-forest text-warmcream font-semibold text-sm tracking-wide shadow-xl shadow-forest/10 hover:bg-forest-light active:scale-95 transition-all duration-150 text-center"
+                   aria-label="Book on Instagram">
                     <span data-lang="en">{hero.cta.en}</span>
                     <span data-lang="hi">{hero.cta.hi}</span>
+                    <!-- Custom Instagram Minimalist Icon -->
+                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
                 </a>
-                <a href="https://www.instagram.com/shash.yoga" target="_blank" class="w-full sm:w-auto text-center border-2 border-forest/10 px-8 py-4 rounded-full font-bold text-sm sm:text-base hover:bg-forest/5 active:scale-95 transition-all flex items-center justify-center space-x-2">
-                    <span data-lang="en">{hero.socialCta.en}</span>
-                    <span data-lang="hi">{hero.socialCta.hi}</span>
+                <a href="#about" 
+                   class="inline-flex items-center justify-center px-6 py-4 rounded-full border border-forest/15 text-forest font-semibold text-sm hover:bg-forest/5 active:scale-95 transition-all duration-150 text-center"
+                   aria-label="Learn more about Shashi">
+                    <span data-lang="en">{hero.secondaryCta.en}</span>
+                    <span data-lang="hi">{hero.secondaryCta.hi}</span>
                 </a>
             </div>
         </div>
 
-        <div class="md:col-span-5 order-2">
-            <div class="relative group">
-                <div class="absolute inset-0 bg-sage rounded-[2rem] rotate-3 group-hover:rotate-1 transition-transform duration-500"></div>
-                <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-warmcream shadow-2xl">
-                    <img src="media/hero.jpg" alt="Shashi Shastri - Yoga Master" class="w-full h-full object-cover">
+        <!-- Beautiful Portrait Container (Order 2 so it is placed below text on mobile) -->
+        <div class="md:col-span-5 order-2 flex justify-center items-center w-full">
+            <div class="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-forest-pale border-4 border-white">
+                <!-- Portrait Image (Fills frame fully with elegant yoga silhouette fallback) -->
+                <img id="hero-img" 
+                     src="/media/hero.jpg" 
+                     alt="Shashi Shastri doing a classical meditation pose" 
+                     class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
+                
+                <!-- Absolute Badges for Proof -->
+                <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3.5 rounded-2xl shadow-lg border border-forest/5 flex items-center justify-between">
+                    <div class="flex flex-col text-left">
+                        <span class="text-[10px] font-bold text-sage uppercase tracking-wider" data-lang="en">{hero.imageBadge.label.en}</span>
+                        <span class="text-[10px] font-bold text-sage uppercase tracking-wider" data-lang="hi">{hero.imageBadge.label.hi}</span>
+                        <span class="text-xs font-semibold text-forest font-serif" data-lang="en">{hero.imageBadge.subtitle.en}</span>
+                        <span class="text-xs font-semibold text-forest font-serif" data-lang="hi">{hero.imageBadge.subtitle.hi}</span>
+                    </div>
+                    <div class="flex items-center space-x-1 text-yellow-500">
+                        <span class="font-bold text-sm text-forest">{hero.imageBadge.rating}</span>
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
                 </div>
             </div>
         </div>

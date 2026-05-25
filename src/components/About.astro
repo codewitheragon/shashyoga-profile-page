@@ -1,0 +1,59 @@
+---
+import { content } from '../data/content';
+const { about } = content;
+---
+<section id="about" class="bg-sage-cream/40 py-16 px-4 sm:px-6 border-y border-forest/5">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col space-y-8">
+            <!-- Section Title & Narrative -->
+            <div class="space-y-4">
+                <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="en">{about.subtitle.en}</span>
+                <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="hi">{about.subtitle.hi}</span>
+                
+                <h2 class="text-2xl sm:text-3xl font-serif font-bold text-forest">
+                    <span data-lang="en">{about.title.en}</span>
+                    <span data-lang="hi">{about.title.hi}</span>
+                </h2>
+                
+                <div class="text-base sm:text-lg text-forest/80 leading-relaxed">
+                    <div data-lang="en">
+                        {about.paragraphs.en.map((p, i) => (
+                            <p class={i < about.paragraphs.en.length - 1 ? "mb-4" : ""}>{p}</p>
+                        ))}
+                    </div>
+                    <div data-lang="hi">
+                        {about.paragraphs.hi.map((p, i) => (
+                            <p class={i < about.paragraphs.hi.length - 1 ? "mb-4" : ""}>{p}</p>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bulleted Vertical Timeline -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl border border-forest/5 shadow-sm space-y-6">
+                <h3 class="text-xs font-bold tracking-widest text-forest/40 uppercase border-b border-forest/10 pb-2">
+                    <span data-lang="en">{about.credentialsTitle.en}</span>
+                    <span data-lang="hi">{about.credentialsTitle.hi}</span>
+                </h3>
+
+                <div class="space-y-6 relative border-l border-sage/20 pl-6 ml-2">
+                    {about.stats.map((stat) => (
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 bg-sage text-warmcream p-1 rounded-full w-4 h-4 flex items-center justify-center">
+                                <span class="w-1.5 h-1.5 bg-warmcream rounded-full"></span>
+                            </span>
+                            <h4 class="font-serif text-base sm:text-lg font-bold text-forest">
+                                <span data-lang="en">{stat.title.en}</span>
+                                <span data-lang="hi">{stat.title.hi}</span>
+                            </h4>
+                            <p class="text-xs sm:text-sm text-forest/75 mt-1">
+                                <span data-lang="en">{stat.description.en}</span>
+                                <span data-lang="hi">{stat.description.hi}</span>
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
