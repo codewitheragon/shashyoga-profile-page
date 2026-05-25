@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #0D2214;
+  --color-forest-light: #1B3C24;
+  --color-forest-pale: #E9EFEA;
+  --color-sage: #4E6A56;
+  --color-sage-light: #8FA895;
+  --color-sage-cream: #F4EFEA;
+  --color-warmcream: #FDFBF7;
+  --color-warmcream-card: #FAF6F0;
+
+  --font-sans: "Inter", "Noto Sans Devanagari", "sans-serif";
+  --font-serif: "Playfair Display", "Noto Sans Devanagari", "serif";
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Instant translation mechanics without DOM rebuilds */
+html[lang="en"] [data-lang="hi"] { display: none !important; }
+html[lang="hi"] [data-lang="en"] { display: none !important; }
+
+/* Smooth visual focus states for touch devices */
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,69 @@
+---
+import { content } from '../data/content';
+const { dimensions } = content;
+---
+<section class="bg-forest-pale/40 py-16 px-4 sm:px-6 border-y border-forest/5">
+    <div class="max-w-4xl mx-auto space-y-12">
+        <div class="text-center space-y-3">
+            <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="en">{dimensions.subtitle.en}</span>
+            <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="hi">{dimensions.subtitle.hi}</span>
+            
+            <h2 class="text-2xl sm:text-3xl font-serif font-bold text-forest">
+                <span data-lang="en">{dimensions.title.en}</span>
+                <span data-lang="hi">{dimensions.title.hi}</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {dimensions.items.map((item, index) => (
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-forest/5 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-forest-pale flex items-center justify-center text-forest">
+                        {index === 0 ? (
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18M6.3 6.3l11.4 11.4M17.7 6.3L6.3 17.7"></path>
+                            </svg>
+                        ) : (
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        )}
+                    </div>
+                    <h3 class="font-serif text-lg sm:text-xl font-bold text-forest">
+                        <span data-lang="en">{item.title.en}</span>
+                        <span data-lang="hi">{item.title.hi}</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-forest/75 leading-relaxed">
+                        <span data-lang="en">{item.description.en}</span>
+                        <span data-lang="hi">{item.description.hi}</span>
+                    </p>
+                </div>
+            ))}
+        </div>
+
+        <div class="bg-forest text-warmcream p-6 sm:p-8 rounded-2xl shadow-lg border border-white/10 relative overflow-hidden">
+            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-sage/20 rounded-full blur-2xl"></div>
+            <div class="relative flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="space-y-2">
+                    <span class="text-[10px] tracking-widest text-sage-light uppercase font-bold" data-lang="en">{dimensions.banner.subtitle.en}</span>
+                    <span class="text-[10px] tracking-widest text-sage-light uppercase font-bold" data-lang="hi">{dimensions.banner.subtitle.hi}</span>
+                    
+                    <h4 class="font-serif text-lg sm:text-xl font-bold">
+                        <span data-lang="en">{dimensions.banner.title.en}</span>
+                        <span data-lang="hi">{dimensions.banner.title.hi}</span>
+                    </h4>
+                    
+                    <p class="text-xs sm:text-sm text-warmcream/80 max-w-xl">
+                        <span data-lang="en">{dimensions.banner.description.en}</span>
+                        <span data-lang="hi">{dimensions.banner.description.hi}</span>
+                    </p>
+                </div>
+                <a href="https://www.instagram.com/shash.yoga" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center bg-warmcream text-forest font-bold text-xs sm:text-sm px-5 py-3.5 rounded-full shadow-md hover:bg-sage-cream active:scale-95 transition-all text-center whitespace-nowrap"
+                   aria-label={dimensions.banner.cta.en}>
+                    <span data-lang="en">{dimensions.banner.cta.en}</span>
+                    <span data-lang="hi">{dimensions.banner.cta.hi}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

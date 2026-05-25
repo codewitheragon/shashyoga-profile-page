@@ -1,0 +1,52 @@
+---
+import { content } from '../data/content';
+const { footer } = content;
+---
+<footer class="bg-forest text-warmcream pt-16 pb-12 px-4 sm:px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-radial-gradient from-forest-light to-forest opacity-50 pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto relative z-10 space-y-12">
+        
+        <div class="text-center space-y-6">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/5 border border-white/10 mx-auto">
+                <svg class="w-8 h-8 text-sage-light" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 .587l3.668 7.431 8.2 1.191-5.934 5.787 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.209l8.2-1.191L12 .587z" />
+                </svg>
+            </div>
+            
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold max-w-lg mx-auto leading-relaxed">
+                <span data-lang="en">{footer.cta.en}</span>
+                <span data-lang="hi">{footer.cta.hi}</span>
+            </h3>
+
+            <div class="flex justify-center items-center space-x-6">
+                <a href="https://www.instagram.com/shash.yoga" target="_blank" rel="noopener noreferrer" 
+                   class="p-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 active:scale-90 transition-all text-warmcream"
+                   title="Follow Yoga with Shashi on Instagram"
+                   aria-label="Instagram Page">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.facebook.com/shashi.shastri.54" target="_blank" rel="noopener noreferrer" 
+                   class="p-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 active:scale-90 transition-all text-warmcream"
+                   title="Connect with Shashi on Facebook"
+                   aria-label="Facebook Page">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+            <p class="text-xs text-warmcream/60">
+                <span data-lang="en">{footer.copy.en}</span>
+                <span data-lang="hi">{footer.copy.hi}</span>
+            </p>
+            <p class="text-[11px] text-warmcream/40">
+                &copy; <span id="year">{new Date().getFullYear()}</span> Yoga with Shashi. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>

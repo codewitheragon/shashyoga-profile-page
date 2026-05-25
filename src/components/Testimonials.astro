@@ -1,0 +1,44 @@
+---
+import { content } from '../data/content';
+const { testimonials } = content;
+---
+<section class="py-16 px-4 sm:px-6 max-w-4xl mx-auto space-y-12">
+    <div class="text-center space-y-3">
+        <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="en">{testimonials.subtitle.en}</span>
+        <span class="text-xs font-semibold tracking-wider text-sage uppercase block" data-lang="hi">{testimonials.subtitle.hi}</span>
+        
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-forest">
+            <span data-lang="en">{testimonials.title.en}</span>
+            <span data-lang="hi">{testimonials.title.hi}</span>
+        </h2>
+    </div>
+
+    <div class="space-y-6">
+        {testimonials.items.map((item) => (
+            <div class="bg-warmcream-card p-6 sm:p-8 rounded-2xl border border-forest/5 shadow-sm relative text-left">
+                <span class="absolute right-6 top-6 text-7xl font-serif text-sage/10 leading-none select-none">“</span>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-1 text-yellow-500">
+                        {[...Array(5)].map(() => (
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        ))}
+                    </div>
+                    <p class="text-sm sm:text-base text-forest/80 italic leading-relaxed">
+                        <span data-lang="en">{item.text.en}</span>
+                        <span data-lang="hi">{item.text.hi}</span>
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-sage/20 flex items-center justify-center font-bold text-xs text-forest">
+                            {item.initials}
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-forest">{item.author}</h4>
+                            <span class="text-[10px] text-sage font-medium uppercase tracking-wider" data-lang="en">{item.location.en}</span>
+                            <span class="text-[10px] text-sage font-medium uppercase tracking-wider" data-lang="hi">{item.location.hi}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>

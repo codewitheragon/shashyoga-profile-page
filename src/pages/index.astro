@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Stats from '../components/Stats.astro';
+import Gallery from '../components/Gallery.astro';
+import Dimensions from '../components/Dimensions.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	<Navbar />
+	<main class="relative overflow-hidden">
+		<Hero />
+		<Stats />
+		<Gallery />
+		<Dimensions />
+		<Testimonials />
+	</main>
+	<Footer />
+</Layout>

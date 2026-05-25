@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+import { content } from '../data/content';
+
+const { seo } = content;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>{seo.title}</title>
+    <meta name="description" content={seo.description}>
+    <meta name="keywords" content={seo.keywords}>
+    <meta name="author" content={seo.author}>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href={seo.canonical}>
+
+    <!-- Open Graph / Facebook / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={seo.canonical}>
+    <meta property="og:title" content={seo.title}>
+    <meta property="og:description" content={seo.description}>
+    <meta property="og:image" content={seo.ogImage}>
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content={seo.canonical}>
+    <meta property="twitter:title" content={seo.title}>
+    <meta property="twitter:description" content={seo.description}>
+    <meta property="twitter:image" content={seo.ogImage}>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="bg-warmcream text-forest font-sans antialiased selection:bg-sage/20 selection:text-forest">
+    <slot />
+
+    <script is:inline>
+        /**
+         * Dynamic, zero-reload language switching.
+         */
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const btnEn = document.getElementById('lang-btn-en');
+            const btnHi = document.getElementById('lang-btn-hi');
+
+            if (lang === 'en') {
+                btnEn.setAttribute('aria-checked', 'true');
+                btnEn.className = "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 bg-forest text-warmcream shadow-sm";
+                btnHi.setAttribute('aria-checked', 'false');
+                btnHi.className = "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 text-forest hover:bg-forest/5";
+            } else {
+                btnHi.setAttribute('aria-checked', 'true');
+                btnHi.className = "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 bg-forest text-warmcream shadow-sm";
+                btnEn.setAttribute('aria-checked', 'false');
+                btnEn.className = "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 text-forest hover:bg-forest/5";
+            }
+        }
+    </script>
+</body>
+</html>

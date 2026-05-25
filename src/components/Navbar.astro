@@ -1,0 +1,26 @@
+---
+import { content } from '../data/content';
+const { nav } = content;
+---
+<header class="sticky top-0 z-50 w-full bg-warmcream/80 backdrop-blur-md border-b border-forest/5 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="#" class="flex flex-col focus:outline-none" aria-label="Yoga with Shashi Home">
+            <span class="font-serif text-lg sm:text-2xl font-bold tracking-tight text-forest whitespace-nowrap">
+                {nav.title}
+            </span>
+            <span class="text-[10px] tracking-wider uppercase text-sage font-semibold -mt-1" data-lang="en">{nav.subtitle.en}</span>
+            <span class="text-[10px] tracking-wider uppercase text-sage font-semibold -mt-1" data-lang="hi">{nav.subtitle.hi}</span>
+        </a>
+
+        <div class="flex items-center">
+            <div class="bg-forest/5 p-1 rounded-full flex items-center space-x-1" role="radiogroup" aria-label="Language Selector">
+                <button onclick="setLanguage('en')" id="lang-btn-en" class="px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 bg-forest text-warmcream shadow-sm" aria-checked="true" role="radio">
+                    EN
+                </button>
+                <button onclick="setLanguage('hi')" id="lang-btn-hi" class="px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 text-forest hover:bg-forest/5" aria-checked="false" role="radio">
+                    हिंदी
+                </button>
+            </div>
+        </div>
+    </div>
+</header>

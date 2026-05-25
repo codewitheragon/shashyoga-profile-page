@@ -1,0 +1,168 @@
+export const content = {
+  seo: {
+    title: "Yoga with Shashi — Authentic Patanjali & Traditional Pranayam",
+    description: "Experience authentic classical yoga with Shashi Shastri (Masters in Hatha Yoga). Specializing in Traditional Patanjali, Pranayam, and Shatkarma cleansing. Join live online from USA, UK, Dubai, or in-person in Ahmedabad.",
+    keywords: "Yoga with Shashi, Shashi Shastri, Hatha Yoga Masters Haridwar, Patanjali Yoga Ahmedabad, Pranayam classes, online yoga India, yoga teacher Ahmedabad, Shatkarma Kriya, authentic yoga, yoga for beginners, yoga for seniors",
+    author: "Shashi Shastri",
+    canonical: "https://yogawithshashi.com",
+    ogImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200"
+  },
+  nav: {
+    title: "Yoga with Shashi",
+    subtitle: {
+      en: "IN-PERSON & ONLINE",
+      hi: "व्यक्तिगत और ऑनलाइन"
+    }
+  },
+  hero: {
+    badge: {
+      en: "AUTHENTIC LINAGE PRACTICE",
+      hi: "प्रामाणिक योग परंपरा"
+    },
+    title: {
+      en: "Embrace the Authentic Path of Yoga",
+      hi: "योग के प्रामाणिक मार्ग को अपनाएं"
+    },
+    description: {
+      en: "Deepen your physical strength, restore flexibility, and find mental stillness with Shashi Shastri. Masters in Hatha Yoga from Haridwar. Interactive online sessions globally and in-person classes in Ahmedabad.",
+      hi: "शशि शास्त्री के साथ अपनी शारीरिक शक्ति को गहरा करें, लचीलापन बहाल करें और मानसिक स्थिरता पाएं। हरिद्वार से हठ योग में मास्टर्स। विश्व स्तर पर इंटरएक्टिव ऑनलाइन सत्र और अहमदाबाद में व्यक्तिगत कक्षाएं।"
+    },
+    cta: {
+      en: "Explore Sessions",
+      hi: "सत्र देखें"
+    },
+    socialCta: {
+      en: "Follow the Journey",
+      hi: "जुड़ें हमारे साथ"
+    }
+  },
+  stats: [
+    {
+      title: { en: "15+ Years of Dedicated Journey", hi: "15+ वर्षों का समर्पित अनुभव" },
+      description: { 
+        en: "Proudly teaching local communities and global travelers, now permanently based in Ahmedabad, Gujarat.",
+        hi: "स्थानीय समुदायों और दुनिया भर के साधकों को योग दीक्षा, अब अहमदाबाद, गुजरात में स्थायी रूप से स्थापित।"
+      }
+    },
+    {
+      title: { en: "Masters in Hatha Yoga", hi: "हठ योग में मास्टर्स (Masters)" },
+      description: { 
+        en: "Obtained a comprehensive postgraduate degree in Hatha Yoga from a highly reputed, traditional yoga college in Haridwar.",
+        hi: "हरिद्वार के एक अत्यंत प्रतिष्ठित और पारंपरिक योग महाविद्यालय से हठ योग में व्यापक स्नातकोत्तर (Postgraduate) डिग्री प्राप्त की।"
+      }
+    },
+    {
+      title: { en: "200+ Dedicated Students", hi: "200+ समर्पित छात्र" },
+      description: { 
+        en: "Actively mentoring and transforming hundreds of practitioners globally and locally with personalized attention.",
+        hi: "व्यक्तिगत ध्यान के साथ वैश्विक और स्थानीय स्तर पर सैकड़ों योग साधकों का सक्रिय मार्गदर्शन और जीवन परिवर्तन।"
+      }
+    },
+    {
+      title: { en: "Global Teaching Portfolio", hi: "वैश्विक योग पोर्टफोलियो" },
+      description: { 
+        en: "Instructed diverse student communities across India, USA, UK, and Dubai via intensive virtual modules.",
+        hi: "वर्चुअल माध्यमों से भारत, अमेरिका, यूके (UK) और दुबई के सैकड़ों विविध साधकों को निरंतर मार्गदर्शन।"
+      }
+    },
+    {
+      title: { en: "Multi-Generational Specialist", hi: "बहु-पीढ़ी स्वास्थ्य विशेषज्ञ" },
+      description: { 
+        en: "Expertly and safely modifying complex yoga postures for practitioners ranging from ages 5 to 88.",
+        hi: "5 वर्ष के बच्चों से लेकर 88 वर्ष तक के बुजुर्गों के लिए योग मुद्राओं को बेहद सुरक्षित और प्रभावी रूप से संशोधित करने में माहिर।"
+      }
+    }
+  ],
+  gallery: {
+    title: { en: "Visual Vault: Movement & Stillness", hi: "साधना दीर्घा: गतिशीलता और शांति" },
+    subtitle: { en: "Inside the Practice", hi: "अभ्यास की झलक" },
+    description: {
+      en: "A glimpse of structural alignments, asana precision, and traditional daily sadhana practices.",
+      hi: "शारीरिक संरेखण, सटीक आसन मुद्राओं और दैनिक पारम्परिक योग साधना की झलकियां।"
+    },
+    items: [
+      {
+        image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600",
+        alt: "Ashtanga Alignment",
+        title: { en: "Ashtanga Alignment", hi: "अष्टांग संरेखण" },
+        category: { en: "Structural Balance", hi: "शारीरिक संतुलन" }
+      },
+      {
+        image: "https://i1.ytimg.com/vi/JwNV-IxXvBQ/hqdefault.jpg",
+        alt: "YouTube Session",
+        title: { en: "Watch live on YouTube", hi: "यूट्यूब लाइव सत्र देखें" },
+        category: { en: "Interactive Stream", hi: "इंटरएक्टिव लाइव" },
+        link: "https://www.youtube.com/watch?v=JwNV-IxXvBQ"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1506126279646-a6602472f626?auto=format&fit=crop&q=80&w=600",
+        alt: "Pranayama Stillness",
+        title: { en: "Pranayama Stillness", hi: "प्राणायाम और एकाग्रता" },
+        category: { en: "Mental Grounding", hi: "मानसिक स्थिरता" }
+      }
+    ]
+  },
+  dimensions: {
+    title: { en: "The Dimensions of Yoga", hi: "योग के विभिन्न आयाम" },
+    subtitle: { en: "Expertise & Delivery", hi: "विशेषज्ञता और सिखाने का तरीका" },
+    items: [
+      {
+        title: { en: "Traditional Patanjali and Pranayam", hi: "पारंपरिक पतंजलि और प्राणायाम" },
+        description: {
+          en: "Focuses on classical Patanjali yoga sutras, structural alignment, pranayama breath-control, and physical integration to establish deep restoration.",
+          hi: "गहरे स्वास्थ्य लाभ और ऊर्जा संतुलन स्थापित करने के लिए शास्त्रीय पतंजलि योग सूत्रों, शारीरिक संरेखण, प्राणायाम श्वास-नियंत्रण और शारीरिक एकीकरण पर ध्यान केंद्रित करता है।"
+        }
+      },
+      {
+        title: { en: "Shatkarma Kriyas & Cleansing", hi: "षट्कर्म क्रियाएं और शरीर शुद्धि" },
+        description: {
+          en: "Authentic purification techniques including Jal Neti, Dhauti, and advanced Pranayama mechanics to detoxify channels, settle digestion, and clarify respiratory pathways.",
+          hi: "जल नेति, धौति और उन्नत प्राणायाम जैसी वैज्ञानिक एवं प्रामाणिक शुद्धि तकनीकें, जो शरीर के विषैले तत्वों को दूर कर पाचन और श्वसन तंत्र को उत्तम बनाती हैं।"
+        }
+      }
+    ],
+    banner: {
+      title: { en: "Flexible Formats, Seamless Path", hi: "सुविधानुसार कक्षाएं, सहज अभ्यास" },
+      subtitle: { en: "HOW WE CONNECT", hi: "जुड़ने का माध्यम" },
+      description: {
+        en: "Attend personal local training sessions in Ahmedabad or participate remotely in interactive live-streamed online classes globally via Instagram & Facebook Private Rooms.",
+        hi: "अहमदाबाद में व्यक्तिगत कक्षाओं में शामिल हों या इंस्टाग्राम और फेसबुक प्राइवेट रूम के माध्यम से दुनिया भर से ऑनलाइन लाइव-स्ट्रीम कक्षाओं का लाभ उठाएं।"
+      },
+      cta: { en: "Inquire via Direct Message", hi: "सीधा संदेश (DM) भेजें" }
+    }
+  },
+  testimonials: {
+    title: { en: "Transformations From the Mat", hi: "योग साधना से जीवन परिवर्तन" },
+    subtitle: { en: "Student Chronicles", hi: "साधकों के अनुभव" },
+    items: [
+      {
+        text: {
+          en: "Shashi’s focus on structural details completely cured my 3-year chronic lower back stiffness. Her virtual classes feel so precise that it’s like she’s in the room with you, watching every breath.",
+          hi: "शशि जी के शारीरिक संरेखण पर सूक्ष्म ध्यान देने से मेरी 3 साल पुरानी पीठ के निचले हिस्से की अकड़न पूरी तरह से ठीक हो गई। उनके ऑनलाइन लाइव सेशन इतने सटीक हैं कि लगता है जैसे वह व्यक्तिगत रूप से सामने बैठकर देख रही हैं।"
+        },
+        author: "Aarav P.",
+        location: { en: "Ahmedabad, Gujarat", hi: "अहमदाबाद, गुजरात" },
+        initials: "AP"
+      },
+      {
+        text: {
+          en: "At 72, I was incredibly afraid of sustaining injury during asanas. Shashi modifies postures with supreme tenderness and patience. I have regained physical balance and now sleep so peacefully.",
+          hi: "72 साल की उम्र में, मुझे योग अभ्यास के दौरान चोट लगने का डर था। शशि जी ने अत्यंत संवेदनशीलता और धैर्य के साथ आसनों को मेरे अनुकूल संशोधित किया। मैंने फिर से शारीरिक संतुलन प्राप्त कर लिया है और अब गहरी नींद सो पाती हूँ।"
+        },
+        author: "Margaret M.",
+        location: { en: "Edinburgh, Scotland", hi: "एडिनबर्ग, स्कॉटलैंड" },
+        initials: "MM"
+      }
+    ]
+  },
+  footer: {
+    cta: {
+      en: "Ready to establish harmony within your body?",
+      hi: "क्या आप अपने शरीर में संतुलन और शांति स्थापित करने के लिए तैयार हैं?"
+    },
+    copy: {
+      en: "Yoga with Shashi — Authentic Practice, Globally Connected. Based in Ahmedabad.",
+      hi: "योगा विद शशि — प्रामाणिक अभ्यास, वैश्विक जुड़ाव। अहमदाबाद, गुजरात में स्थित।"
+    }
+  }
+};
