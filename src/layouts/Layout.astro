@@ -37,6 +37,47 @@ const { seo } = content;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Structured Data: Local Business & Instructor Profile -->
+    <script type="application/ld+json" is:inline>
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Yoga with Shashi",
+          "image": "https://yogawithshashi.pages.dev/media/hero.jpg",
+          "@id": "https://yogawithshashi.pages.dev",
+          "url": "https://yogawithshashi.pages.dev",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 23.0225,
+            "longitude": 72.5714
+          },
+          "sameAs": [
+            "https://instagram.com/shash.yoga/"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Shashi Shastri",
+          "url": "https://yogawithshashi.pages.dev",
+          "image": "https://yogawithshashi.pages.dev/media/hero.jpg",
+          "jobTitle": "Yoga Instructor",
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Dev Sanskriti Vishwavidyalaya (DSVV), Haridwar"
+          },
+          "description": "Masters in Hatha Yoga from DSVV, Haridwar. Specialist in Traditional Patanjali and Pranayam."
+        }
+      ]
+    </script>
 </head>
 <body class="bg-warmcream text-forest font-sans antialiased selection:bg-sage/20 selection:text-forest">
     <slot />

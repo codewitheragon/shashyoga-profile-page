@@ -2,30 +2,30 @@ export const content = {
   seo: {
     title: "Yoga with Shashi — Authentic Patanjali & Traditional Pranayam",
     description: "Experience authentic classical yoga with Shashi Shastri (Masters in Hatha Yoga). Specializing in Traditional Patanjali, Pranayam, and Shatkarma cleansing. Join live online from USA, UK, Dubai, or in-person in Ahmedabad.",
-    keywords: "Yoga with Shashi, Shashi Shastri, Hatha Yoga Masters Haridwar, Patanjali Yoga Ahmedabad, Pranayam classes, online yoga India, yoga teacher Ahmedabad, Shatkarma Kriya, authentic yoga, yoga for beginners, yoga for seniors",
+    keywords: "Yoga with Shashi, Shashi Shastri, DSVV Haridwar alumni, Dev Sanskriti Vishwavidyalaya yoga, Masters in Hatha Yoga, Patanjali Yoga Ahmedabad, Pranayam classes Ahmedabad, online yoga India, Shatkarma Kriya specialist, authentic traditional yoga, yoga for back pain, postpartum yoga recovery, yoga for seniors, classical yoga teacher, personal yoga trainer Ahmedabad, yoga home tuition Ahmedabad, best yoga teacher Ahmedabad, yoga for weight loss, yoga for stress relief, yoga for flexibility, yoga for respiratory health, Jal Neti specialist Ahmedabad, traditional Hatha Yoga India, live yoga sessions USA UK Dubai, yoga for NRIs, spiritual yoga Ahmedabad",
     author: "Shashi Shastri",
-    canonical: "https://yogawithshashi.com",
-    ogImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200"
+    canonical: "https://yogawithshashi.pages.dev",
+    ogImage: "https://yogawithshashi.pages.dev/media/hero.jpg"
   },
   nav: {
     title: "Yoga with Shashi",
     subtitle: {
-      en: "IN-PERSON & ONLINE",
+      en: "PERSONAL & ONLINE YOGA",
       hi: "व्यक्तिगत और ऑनलाइन"
     }
   },
   hero: {
     badge: {
-      en: "AUTHENTIC LINAGE PRACTICE",
+      en: "AUTHENTIC DSVV HARIDWAR LINEAGE",
       hi: "प्रामाणिक योग परंपरा"
     },
     title: {
-      en: "Embrace the Authentic <br class=\"hidden sm:inline\" /><span class=\"italic font-normal\">Path of Yoga</span>",
-      hi: "योग के प्रामाणिक <br class=\"hidden sm:inline\" /> मार्ग को अपनाएं"
+      en: "Authentic <span class=\"italic font-normal\">Personal Yoga Trainer</span> in Ahmedabad & Online",
+      hi: "अहमदाबाद में सर्वश्रेष्ठ <br class=\"hidden sm:inline\" /> व्यक्तिगत योग प्रशिक्षक"
     },
     description: {
-      en: "Deepen your physical strength, restore flexibility, and find mental stillness with Shashi Shastri. Masters in Hatha Yoga from Haridwar. Interactive online sessions globally and in-person classes in Ahmedabad.",
-      hi: "शशि शास्त्री के साथ अपनी शारीरिक शक्ति को गहरा करें, लचीलापन बहाल करें और मानसिक स्थिरता पाएं। हरिद्वार से हठ योग में मास्टर्स। विश्व स्तर पर इंटरएक्टिव ऑनलाइन सत्र और अहमदाबाद में व्यक्तिगत कक्षाएं।"
+      en: "Master your health with Shashi Shastri, a DSVV Haridwar Alumni with a Masters in Hatha Yoga. Specialized personal sessions for back pain, postpartum recovery, and traditional Pranayam. Join live from anywhere in the world.",
+      hi: "शशि शास्त्री के साथ अपने स्वास्थ्य को बेहतर बनाएं। हरिद्वार से हठ योग में मास्टर्स। पीठ दर्द, प्रसवोत्तर रिकवरी और पारंपरिक प्राणायाम के लिए विशेष व्यक्तिगत सत्र।"
     },
     cta: {
       en: "Schedule & Book via Instagram",
@@ -42,66 +42,67 @@ export const content = {
     }
   },
   about: {
-    subtitle: { en: "Deep Trust & Experience", hi: "विश्वास और प्रामाणिक अनुभव" },
-    title: { en: "From the Mat: Shashi Shastri", hi: "योग साधन - शशि शास्त्री की यात्रा" },
+    subtitle: { en: "Experienced Personal Yoga Teacher", hi: "विश्वास और प्रामाणिक अनुभव" },
+    title: { en: "Expertise in Traditional Yoga: Shashi Shastri", hi: "योग साधन - शशि शास्त्री की यात्रा" },
     paragraphs: {
       en: [
-        "For as long as I can remember, yoga has been the steady heartbeat of my life. I was blessed to begin practicing as a child, and over the decades, it has evolved from a daily ritual into my absolute life force. Yoga isn't just what I do; it is exactly who I am.",
-        "When I became a mom, my relationship with the mat shifted completely. Suddenly, I was living in the beautiful, overwhelming whirlwind of motherhood—dealing with sleepless nights, deep postpartum exhaustion, and that heavy mental load where you constantly put everyone else’s needs above your own. In those chaotic years, my yoga mat became my lifeline. It wasn’t a place to perform perfect, rigid postures; it was a quiet sanctuary where I could simply breathe, rebuild my core strength from the inside out, and reclaim my sanity.",
-        "That is the warmth and understanding I bring to you. As a graduated yoga instructor with over a decade of teaching across the globe, I don’t look at you as just another student in a class. I see you as a whole person. Whether you are joining me in person here in Ahmedabad or practicing live with me from across the world, my sessions are a safe, judgment-free space. Think of it as coming home to yourself—a place to heal your body, quiet your mind, and gather the strength you need to handle everything waiting for you off the mat."
+        "Yoga has been the steady heartbeat of my life. As a **Masters in Hatha Yoga from DSVV Haridwar**, I have dedicated over 15 years to the authentic practice and teaching of classical yoga. My journey has taken me from the banks of the Ganges to teaching diverse global communities.",
+        "When I became a mom, I discovered the transformative power of **Postpartum Yoga**. My mat became a sanctuary for rebuilding core strength and finding mental stillness amidst the chaos of motherhood. This personal experience allows me to guide other mothers with deep empathy and scientific precision.",
+        "Whether you are looking for a **Personal Yoga Trainer in Ahmedabad** or joining my live sessions from the USA, UK, or Dubai, I offer a judgment-free space to heal. My approach combines traditional Patanjali sutures with modern physiological understanding to help you reclaim your health."
       ],
       hi: [
-        "जहाँ तक मुझे याद है, योग मेरे जीवन की एक शांत और स्थिर धड़कन रहा है। मैं भाग्यशाली थी कि बचपन में ही मेरा परिचय इस साधना से हो गया था, और दशकों के इस सफर में यह केवल एक आदत नहीं, बल्कि मेरी जीवन-शक्ति बन गया है। योग सिर्फ वो नहीं है जो मैं करती हूँ; योग वही है जो मैं हूँ।",
-        "जब मैं एक माँ बनी, तो मैट के साथ मेरा रिश्ता पूरी तरह बदल गया। अचानक, मैं मातृत्व के उस खूबसूरत लेकिन थका देने वाले दौर में थी—जहाँ नींद अधूरी थी, शरीर में भारी थकान थी, और मन पर एक ऐसा बोझ था जहाँ हम हमेशा दूसरों को खुद से आगे रखते हैं। उन उलझन भरे सालों में, मेरा योग मैट मेरा सहारा बना। वह जगह किसी कठिन आसन को दिखाने के लिए नहीं थी; वह एक ऐसा शांत कोना था जहाँ मैं बस गहरी साँस ले सकूं, अपनी आंतरिक शक्ति को फिर से जगा सकूं और मानसिक शांति पा सकूं।",
-        "यही अपनापन और समझ मैं आपके लिए लेकर आती हूँ। दुनिया भर के छात्रों को सिखाने के एक दशक से अधिक के अनुभव के साथ एक ग्रेजुएटेड योग शिक्षक के रूप में, मैं आपको सिर्फ एक क्लास में आए छात्र की तरह नहीं देखती। मैं आपको एक संपूर्ण व्यक्ति के रूप में देखती हूँ। चाहे आप अहमदाबाद में मुझसे मिलने आएं या दुनिया के किसी भी कोने से मेरे साथ लाइव अभ्यास करें, मेरे सत्र आपके लिए एक सुरक्षित स्थान हैं, जहाँ कोई आपको जज नहीं करेगा। इसे अपने पास वापस लौटने जैसा समझिए—एक ऐसी जगह जो आपके शरीर को स्वस्थ करेगी, आपके मन को शांत करेगी, और आपको वह शक्ति देगी जिसकी ज़रूरत आपको मैट से बाहर की दुनिया में है।"
+        "जहाँ तक मुझे याद है, योग मेरे जीवन की एक शांत और स्थिर धड़कन रहा है। हरिद्वार से हठ योग में मास्टर्स के रूप में, मैंने शास्त्रीय योग के प्रामाणिक अभ्यास और शिक्षण के लिए 15 से अधिक वर्ष समर्पित किए हैं।",
+        "जब मैं एक माँ बनी, तो मैंने पोस्टपार्टम योग की परिवर्तनकारी शक्ति की खोज की। मेरा योग मैट प्रसवोत्तर थकान और मातृत्व की मानसिक उथल-पुथल के बीच शारीरिक और मानसिक शांति पाने का सहारा बना।",
+        "चाहे आप अहमदाबाद में व्यक्तिगत योग प्रशिक्षक (Personal Yoga Trainer) की तलाश कर रहे हों या दुनिया के किसी भी कोने से मेरे साथ लाइव अभ्यास करें, मेरे सत्र आपके लिए एक सुरक्षित स्थान हैं।"
       ]
     },
-    credentialsTitle: { en: "Core Credentials", hi: "मुख्य योग्यताएं और अनुभव" },
+    credentialsTitle: { en: "Masters in Yoga & Experience", hi: "मुख्य योग्यताएं और अनुभव" },
     stats: [
       {
         title: { en: "15+ Years of Dedicated Journey", hi: "15+ वर्षों का समर्पित अनुभव" },
         description: { 
-          en: "Proudly teaching local communities and global travelers, now permanently based in Ahmedabad, Gujarat.",
-          hi: "स्थानीय समुदायों और दुनिया भर के साधकों को योग दीक्षा, अब अहमदाबाद, गुजरात में स्थायी रूप से स्थापित।"
+          en: "Professional yoga teacher in Ahmedabad, proudly teaching local communities and global practitioners.",
+          hi: "अहमदाबाद, गुजरात में पेशेवर योग शिक्षक, स्थानीय समुदायों और दुनिया भर के साधकों को योग दीक्षा।"
         }
       },
       {
-        title: { en: "Masters in Hatha Yoga", hi: "हठ योग में मास्टर्स (Masters)" },
+        title: { en: "DSVV Haridwar Alumni", hi: "हरिद्वार (DSVV) से हठ योग में मास्टर्स" },
         description: { 
-          en: "Obtained a comprehensive postgraduate degree in Hatha Yoga from a highly reputed, traditional yoga college in Haridwar.",
-          hi: "हरिद्वार के एक अत्यंत प्रतिष्ठित and पारंपरिक योग महाविद्यालय से हठ योग में व्यापक स्नातकोत्तर (Postgraduate) डिग्री प्राप्त की।"
+          en: "Obtained a Masters degree in Hatha Yoga from Dev Sanskriti Vishwavidyalaya, a world-renowned traditional yoga university.",
+          hi: "हरिद्वार के विश्व प्रसिद्ध देव संस्कृति विश्वविद्यालय (DSVV) से हठ योग में व्यापक स्नातकोत्तर (Masters) डिग्री प्राप्त की।"
         }
       },
       {
-        title: { en: "200+ Dedicated Students", hi: "200+ समर्पित छात्र" },
+        title: { en: "Global Online Yoga Studio", hi: "200+ समर्पित छात्र" },
         description: { 
-          en: "Actively mentoring and transforming hundreds of practitioners globally and locally with personalized attention.",
-          hi: "व्यक्तिगत ध्यान के साथ वैश्विक और स्थानीय स्तर पर सैकड़ों योग साधकों का सक्रिय मार्गदर्शन और जीवन परिवर्तन।"
+          en: "Mentoring students across India, USA, UK, and Dubai with interactive virtual yoga modules and personalized attention.",
+          hi: "भारत, अमेरिका, यूके और दुबई के सैकड़ों विविध साधकों को निरंतर मार्गदर्शन और व्यक्तिगत ध्यान।"
         }
       },
       {
-        title: { en: "Global Teaching Portfolio", hi: "वैश्विक योग पोर्टफोलियो" },
+        title: { en: "Shatkarma & Cleansing Specialist", hi: "षट्कर्म और शुद्धि विशेषज्ञ" },
         description: { 
-          en: "Instructed diverse student communities across India, USA, UK, and Dubai via intensive virtual modules.",
-          hi: "वर्चुअल माध्यमों से भारत, अमेरिका, यूके (UK) और दुबई के सैकड़ों विविध साधकों को निरंतर मार्गदर्शन।"
+          en: "Expert in authentic purification techniques like Jal Neti and Dhauti to detoxify the body and settle digestion.",
+          hi: "शरीर को डिटॉक्स करने और पाचन तंत्र को ठीक करने के लिए जल नेति और धौति जैसी प्रामाणिक शुद्धि तकनीकों में विशेषज्ञ।"
         }
       },
       {
         title: { en: "Multi-Generational Specialist", hi: "बहु-पीढ़ी स्वास्थ्य विशेषज्ञ" },
         description: { 
-          en: "Expertly and safely modifying complex yoga postures for practitioners ranging from ages 5 to 88.",
-          hi: "5 वर्ष के बच्चों से लेकर 88 वर्ष तक के बुजुर्गों के लिए योग मुद्राओं को बेहद सुरक्षित और प्रभावी रूप से संशोधित करने में माहिर।"
+          en: "Safe yoga for seniors (up to age 88) and kids, with modified postures for every body type and health condition.",
+          hi: "5 वर्ष के बच्चों से लेकर 88 वर्ष तक के बुजुर्गों के लिए सुरक्षित और प्रभावी योग अभ्यास।"
         }
       }
     ]
   },
   gallery: {
-    title: { en: "Visual Vault: Movement & Stillness", hi: "साधना दीर्घा: गतिशीलता और शांति" },
+    title: { en: "Classical Yoga Gallery: Movement & Stillness", hi: "साधना दीर्घा: गतिशीलता और शांति" },
     subtitle: { en: "Inside the Practice", hi: "अभ्यास की झलक" },
     description: {
-      en: "A glimpse of structural alignments, asana precision, and traditional daily sadhana practices.",
+      en: "Glimpses of structural alignment, asana precision, and traditional daily sadhana practices in Ahmedabad.",
       hi: "शारीरिक संरेखण, सटीक आसन मुद्राओं और दैनिक पारम्परिक योग साधना की झलकियां। "
     },
+
     items: [
       {
         image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600",
@@ -125,32 +126,32 @@ export const content = {
     ]
   },
   dimensions: {
-    title: { en: "The Dimensions of Yoga", hi: "योग के विभिन्न आयाम" },
-    subtitle: { en: "Expertise & Delivery", hi: "विशेषज्ञता और सिखाने का तरीका" },
+    title: { en: "The Dimensions of Yoga Therapy", hi: "योग के विभिन्न आयाम" },
+    subtitle: { en: "Expertise & Delivery in Ahmedabad", hi: "विशेषज्ञता और सिखाने का तरीका" },
     items: [
       {
         title: { en: "Traditional Patanjali and Pranayam", hi: "पारंपरिक पतंजलि और प्राणायाम" },
         description: {
-          en: "Focuses on classical Patanjali yoga sutras, structural alignment, pranayama breath-control, and physical integration to establish deep restoration.",
+          en: "Focuses on classical Patanjali yoga sutras, structural alignment, and pranayama breath-control for deep respiratory health and mental restoration.",
           hi: "गहरे स्वास्थ्य लाभ और ऊर्जा संतुलन स्थापित करने के लिए शास्त्रीय पतंजलि योग सूत्रों, शारीरिक संरेखण, प्राणायाम श्वास-नियंत्रण और शारीरिक एकीकरण पर ध्यान केंद्रित करता है।"
         }
       },
       {
-        title: { en: "Shatkarma Kriyas & Cleansing", hi: "षट्कर्म क्रियाएं और शरीर शुद्धि" },
+        title: { en: "Shatkarma Kriyas & Body Detox", hi: "षट्कर्म क्रियाएं और शरीर शुद्धि" },
         description: {
-          en: "Authentic purification techniques including Jal Neti, Dhauti, and advanced Pranayama mechanics to detoxify channels, settle digestion, and clarify respiratory pathways.",
+          en: "Authentic purification techniques (Jal Neti, Dhauti) to detoxify channels, settle digestion, and clarify respiratory pathways with scientific precision.",
           hi: "जल नेति, धौति और उन्नत प्राणायाम जैसी वैज्ञानिक एवं प्रामाणिक शुद्धि तकनीकें, जो शरीर के विषैले तत्वों को दूर कर पाचन और श्वसन तंत्र को उत्तम बनाती हैं।"
         }
       }
     ],
     banner: {
-      title: { en: "Flexible Formats, Seamless Path", hi: "सुविधानुसार कक्षाएं, सहज अभ्यास" },
-      subtitle: { en: "HOW WE CONNECT", hi: "जुड़ने का माध्यम" },
+      title: { en: "Flexible Sessions, Seamless Path", hi: "सुविधानुसार कक्षाएं, सहज अभ्यास" },
+      subtitle: { en: "HOW WE CONNECT LOCALLY & GLOBALLY", hi: "जुड़ने का माध्यम" },
       description: {
-        en: "Attend personal local training sessions in Ahmedabad or participate remotely in interactive live-streamed online classes globally via Instagram & Facebook Private Rooms.",
+        en: "Attend private personal training sessions in Ahmedabad or participate remotely in interactive live-streamed online classes globally via Instagram & Facebook Rooms.",
         hi: "अहमदाबाद में व्यक्तिगत कक्षाओं में शामिल हों या इंस्टाग्राम और फेसबुक प्राइवेट रूम के माध्यम से दुनिया भर से ऑनलाइन लाइव-स्ट्रीम कक्षाओं का लाभ उठाएं।"
       },
-      cta: { en: "Inquire via Direct Message", hi: "सीधा संदेश (DM) भेजें" }
+      cta: { en: "Inquire for Personal Training", hi: "सीधा संदेश (DM) भेजें" }
     }
   },
   testimonials: {
